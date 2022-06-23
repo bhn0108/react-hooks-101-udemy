@@ -1,10 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const App = (props) => {
   const [state, setState] = useState(props)
   // const [name, setName] = useState(props.name)
   // const [price, setPrice] = useState(props.price)
   const {name, price} = state
+
+  useEffect(() => {
+    console.log('useEffect is invoked')
+  })
+
+  useEffect(() => {
+    console.log('This is like componentDidMount')
+  }, [])
   
   // const reset = () => {
   //   // setName(props.name)
